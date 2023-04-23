@@ -25,6 +25,10 @@ export class Playground {
             this.scene.render();
         });
     }
+    addSohere(name: string, editobj: object, scene: BABYLON.Scene) {
+        this.addSohere(name, editobj, scene);
+
+    }
 
 }
 
@@ -60,3 +64,8 @@ var createScene = function (engine: BABYLON.Engine, canvas: HTMLCanvasElement) {
 
     return scene;
 };
+
+var addSohere = function (name: string, editobj: object, scene: BABYLON.Scene) {
+    var sphere = BABYLON.MeshBuilder.CreateSphere(name, editobj, scene);
+    sphere.position.y = 1
+}
