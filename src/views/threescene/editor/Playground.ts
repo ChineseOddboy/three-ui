@@ -25,9 +25,9 @@ export class Playground {
             this.scene.render();
         });
     }
-    addSohere(name: string, editobj: object, scene: BABYLON.Scene) {
-        this.addSohere(name, editobj, scene);
-
+    addSoheres(name: string, editobj: object, scene: BABYLON.Scene) {
+        addSohere(name, editobj, scene);
+        this.scene.render();
     }
 
 }

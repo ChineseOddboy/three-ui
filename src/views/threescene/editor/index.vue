@@ -5,10 +5,11 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { defineComponent, onMounted, ref, reactive } from 'vue';
+import { onMounted, } from 'vue';
 import { Playground } from './Playground';
-import * as BABYLON from 'babylonjs';
-let PG: any;
+import { saveScene } from './save';
+// import * as BABYLON from 'babylonjs';
+let PG: Playground;
 onMounted(() => {
   createScene();
 });
@@ -19,9 +20,8 @@ function createScene() {
     PG.run();
   }
 }
-function creat(){
-    console.log("1111");
-    PG.addSohere("qwe",{ diameter: 2, segments: 32 },PG.scene);
+function creat() {
+  saveScene(PG.scene);
 }
 </script>
 <style scoped>
